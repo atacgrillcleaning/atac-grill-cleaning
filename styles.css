@@ -5,12 +5,12 @@
 }
 
 :root {
-  --primary-color: #c41e3a;
-  --secondary-color: #2c3e50;
-  --accent-color: #f39c12;
-  --light-gray: #ecf0f1;
-  --dark-gray: #34495e;
-  --text-color: #2c3e50;
+  --primary-color: #DC143C;
+  --secondary-color: #8B0000;
+  --accent-color: #FF4500;
+  --light-color: #FFE4E1;
+  --dark-gray: #2c2c2c;
+  --text-color: #333;
   --border-radius: 8px;
   --transition: all 0.3s ease;
 }
@@ -24,7 +24,7 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #FF6B35 0%, #DC143C 50%, #8B0000 100%);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -36,6 +36,7 @@ header h1 {
   margin-bottom: 10px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
@@ -46,7 +47,7 @@ header p {
 
 .btn {
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: #FF4500;
   color: white;
   padding: 14px 40px;
   text-decoration: none;
@@ -56,13 +57,13 @@ header p {
   transition: var(--transition);
   cursor: pointer;
   border: none;
-  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
 }
 
 .btn:hover {
-  background-color: #e67e22;
+  background-color: #FF6347;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
 }
 
 /* Section Styles */
@@ -90,20 +91,20 @@ section h2::after {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: var(--accent-color);
+  background: linear-gradient(90deg, #FF4500, #FF6347);
   border-radius: 2px;
 }
 
 /* About Section */
 .about {
-  background-color: var(--light-gray);
+  background: linear-gradient(135deg, var(--light-color) 0%, #FFF0F5 100%);
   text-align: center;
 }
 
 .about p {
   font-size: 1.1em;
   line-height: 1.8;
-  color: var(--dark-gray);
+  color: var(--text-color);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -125,14 +126,16 @@ section h2::after {
   border-radius: var(--border-radius);
   padding: 30px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.15);
   transition: var(--transition);
   border-top: 4px solid var(--primary-color);
+  border-left: 2px solid #FF4500;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 25px rgba(220, 20, 60, 0.25);
+  border-top: 4px solid #FF6347;
 }
 
 .card h3 {
@@ -143,7 +146,7 @@ section h2::after {
 }
 
 .card p {
-  color: var(--dark-gray);
+  color: var(--text-color);
   margin-bottom: 20px;
   font-size: 0.95em;
   line-height: 1.6;
@@ -151,13 +154,13 @@ section h2::after {
 
 .card h4 {
   font-size: 1.8em;
-  color: var(--accent-color);
+  color: #FF4500;
   font-weight: 700;
 }
 
 /* Why Choose Us Section */
 .why {
-  background-color: var(--light-gray);
+  background: linear-gradient(135deg, var(--light-color) 0%, #FFF0F5 100%);
 }
 
 .why ul {
@@ -174,19 +177,18 @@ section h2::after {
   border-radius: 4px;
   font-size: 1.05em;
   color: var(--text-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(220, 20, 60, 0.1);
   transition: var(--transition);
 }
 
 .why li:hover {
-  background-color: #fafafa;
+  background-color: #FFF5EE;
   transform: translateX(5px);
+  border-left-color: #FF4500;
 }
 
 .why li::before {
-  content: '✓';
-  color: var(--accent-color);
-  font-weight: bold;
+  content: '🔥';
   margin-right: 10px;
   font-size: 1.2em;
 }
@@ -204,18 +206,19 @@ section h2::after {
 }
 
 .team-card {
-  background: linear-gradient(135deg, #f8f9fa 0%, var(--light-gray) 100%);
+  background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 100%);
   border-radius: var(--border-radius);
   padding: 40px 30px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.15);
   transition: var(--transition);
   border: 2px solid var(--primary-color);
 }
 
 .team-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(196, 30, 58, 0.2);
+  box-shadow: 0 10px 25px rgba(220, 20, 60, 0.3);
+  border-color: #FF4500;
 }
 
 .team-card h3 {
@@ -226,7 +229,7 @@ section h2::after {
 }
 
 .team-card p {
-  color: var(--dark-gray);
+  color: var(--text-color);
   margin: 8px 0;
   font-size: 1em;
 }
@@ -238,7 +241,7 @@ section h2::after {
 
 .leo-badge {
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: #FF4500;
   color: white;
   padding: 8px 15px;
   border-radius: 20px;
@@ -249,17 +252,17 @@ section h2::after {
 
 /* Contact Section */
 .contact {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #34495e 100%);
+  background: linear-gradient(135deg, #FF6347 0%, #DC143C 50%, #8B0000 100%);
   color: white;
   text-align: center;
 }
 
 .contact h2 {
-  color: var(--accent-color);
+  color: #FFE4E1;
 }
 
 .contact h2::after {
-  background: white;
+  background: linear-gradient(90deg, #FFE4E1, #FFD700);
 }
 
 .contact p {
@@ -269,24 +272,25 @@ section h2::after {
 }
 
 .contact strong {
-  color: var(--accent-color);
+  color: #FFE4E1;
   font-weight: 600;
 }
 
 .contact a {
-  color: var(--accent-color);
+  color: #FFE4E1;
   text-decoration: none;
   transition: var(--transition);
 }
 
 .contact a:hover {
   text-decoration: underline;
+  color: #FFFFFF;
 }
 
 /* Footer */
 footer {
-  background-color: #1a252f;
-  color: #ecf0f1;
+  background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+  color: #FFE4E1;
   text-align: center;
   padding: 30px 20px;
   font-size: 0.95em;
