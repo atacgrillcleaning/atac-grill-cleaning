@@ -191,6 +191,62 @@ section h2::after {
   font-size: 1.2em;
 }
 
+/* Team Section */
+.team {
+  background-color: #fff;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, var(--light-gray) 100%);
+  border-radius: var(--border-radius);
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  border: 2px solid var(--primary-color);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(196, 30, 58, 0.2);
+}
+
+.team-card h3 {
+  font-size: 1.6em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.team-card p {
+  color: var(--dark-gray);
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+.team-card p strong {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.leo-badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
 /* Contact Section */
 .contact {
   background: linear-gradient(135deg, var(--secondary-color) 0%, #34495e 100%);
@@ -266,6 +322,14 @@ footer {
     padding: 20px;
   }
 
+  .team-cards {
+    gap: 20px;
+  }
+
+  .team-card {
+    padding: 30px 20px;
+  }
+
   .btn {
     padding: 12px 30px;
     font-size: 1em;
@@ -286,6 +350,10 @@ footer {
   }
 
   .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-cards {
     grid-template-columns: 1fr;
   }
 
